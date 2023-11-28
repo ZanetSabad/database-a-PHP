@@ -1,18 +1,12 @@
 <?php
 	
 	require "assets/database.php";
+	require "assets/student.php";
+
+	$connection = connectionDB();
 
 	if( isset($_GET["id"]) and is_numeric($_GET["id"]) ) {
-		$sql = "SELECT * FROM student 
-		WHERE id = ".$_GET['id'];
-
-		$result = mysqli_query($connection, $sql);
-
-		if ($result === false){
-			echo mysqli_error($connection);
-		} else {
-			$students = mysqli_fetch_assoc($result);
-		}
+		$students = getStudent($connection, $_GET["id"]);
 	}
 	// var_dump($students);
 
@@ -31,16 +25,24 @@
 	<main>
 		<section>
 			<h1>Informace o žákovi</h1>
+		</section>
+		
+		<section>
 			<?php if($students === NULL): ?>
 				<p>Žák nenalezen</p>
 			<?php else: ?>
-				<h2><?= $students["first_name"]. " " .$students["second_name"] ?></h2>
-				<p>Věk: <?= $students["age"]?></p>
-				<p>Dodatečné informace: <?= $students["live"]?></p>
-				<p>Přiřazená kolej: <?= $students["collage"]?></p>
+				<h2><?= htmlspecialchars($students["first_name"]). " " .htmlspecialchars($students["second_name"]) ?></h2>
+				<p>Věk: <?= htmlspecialchars($students["age"])?></p>
+				<p>Dodatečné informace: <?= htmlspecialchars($students["live"])?></p>
+				<p>Přiřazená kolej: <?= htmlspecialchars($students["collage"])?></p>
 			<?php endif; ?>   
 
 		</section>
+
+		<section class="buttons">
+			<a href="edit-student.php?id=<?= $students['id'] ?>">Editovat</a>
+		</section>
+
 	</main>
 
 	<?php require "assets/footer.php" ?>
