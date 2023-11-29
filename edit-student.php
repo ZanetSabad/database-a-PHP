@@ -5,17 +5,37 @@
 
     $connection = connectionDB();
 
+    // Vytažení inforamcí z databáze
     if(isset($_GET["id"]) and is_numeric($_GET["id"])) {
         $one_student = getStudent($connection, $_GET["id"]);
 
-        $first_name = $one_student["first_name"];
-        $second_name = $one_student["second_name"];
-        $age = $one_student["age"];
-        $live = $one_student["live"];
-        $collage = $one_student["collage"];
+        if($one_student) {
+            $first_name = $one_student["first_name"];
+            $second_name = $one_student["second_name"];
+            $age = $one_student["age"];
+            $live = $one_student["live"];
+            $collage = $one_student["collage"];
+            $id = $one_student["id"];
+        } else {
+            die("Student nenalezen");
+        }
+
+     
     } else {
-        $one_student = null;
+        die("Id není zadáno, student nenalezen");
     }
+
+
+    // Po odeslání formuláře
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $first_name = $_POST["first_name"];
+        $second_name = $_POST["second_name"];
+        $age = $_POST["age"];
+        $live = $_POST["live"];
+        $collage = $_POST["collage"];
+
+     updateStudent($connection, $first_name, $second_name, $age, $live, $collage, $id);
+    }      
 
   
 

@@ -1,6 +1,7 @@
 <?php 
 
     require "assets/database.php";
+    require "assets/url.php";
 
     $first_name = null;
     $second_name = null;
@@ -31,16 +32,7 @@
 
             if(mysqli_stmt_execute($statement)) {
                 $id = mysqli_insert_id($connection);
-
-                if(isset($_SERVER["HTTPS"]) and $_SERVER["HTTPS"] != "off") {
-                    $url_protocol = "https";
-                } else {
-                    $url_protocol = "http";
-                }
-
-                header("location: $url_protocol://" . $_SERVER["HTTP_HOST"] . "/databaze/one-student.php?id=$id" );
-                // header("location: one-student.php?id=$id");
-                
+                redirectUrl("/databaze/one-student.php?id=$id");
             } else {
                 echo mysqli_stmt_error($statement);
             }

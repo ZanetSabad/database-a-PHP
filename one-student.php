@@ -41,6 +41,7 @@
 
 		<section class="buttons">
 			<a href="edit-student.php?id=<?= $students['id'] ?>">Editovat</a>
+			<a href="delete-student.php?id=<?=$students['id'] ?>">Vymazat</a>
 		</section>
 
 	</main>

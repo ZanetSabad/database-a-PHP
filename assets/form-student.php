@@ -14,6 +14,13 @@
                 required
         > 
         <br>
+        <input type="text" 
+                name="second_name" 
+                placeholder="Příjmení" 
+                value="<?= htmlspecialchars($second_name) ?>"
+                required
+        > 
+        <br>
         <input type="number" 
                 name="age" 
                 placeholder="Věk" 
@@ -33,7 +40,7 @@
                 required                        
         >
         <br>
-        <button>Přidat</button>
+        <button>Uložit</button>
     </form>
 </body>
 </html>
