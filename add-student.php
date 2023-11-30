@@ -1,7 +1,9 @@
 <?php 
 
     require "assets/database.php";
-    require "assets/url.php";
+    require "assets/student.php";
+
+    $connection = connectionDB();
 
     $first_name = null;
     $second_name = null;
@@ -16,38 +18,12 @@
         $second_name = $_POST["second_name"];
         $age = $_POST["age"];
         $live = $_POST["live"];
-        $collage = $_POST["collage"];   
-
-    $sql = "INSERT INTO student (first_name, second_name, age, live, collage)
-    VALUES (?, ?, ?, ?, ?)";
-
-    $connection = connectionDB();
-
-        $statement = mysqli_prepare($connection, $sql);
+        $collage = $_POST["collage"];           
         
-        if($statement === false){
-            echo mysqli_error($connection);
-        } else {
-            mysqli_stmt_bind_param($statement, "ssiss", $_POST["first_name"], $_POST["second_name"], $_POST["age"], $_POST["live"], $_POST["collage"]);
-
-            if(mysqli_stmt_execute($statement)) {
-                $id = mysqli_insert_id($connection);
-                redirectUrl("/databaze/one-student.php?id=$id");
-            } else {
-                echo mysqli_stmt_error($statement);
-            }
-        }       
-
-    // $result = mysqli_query($connection, $sql);
-    // if ($result === false) {
-    //     echo mysqli_error($connection);
-    // } else {
-    //     $id = mysqli_insert_id($connection);
-    //     echo "Úspěšně vložen žák s id: $id";
-    // } 
+        createStudent($connection, $first_name, $second_name, $age, $live, $collage);
 
     }
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="cs">

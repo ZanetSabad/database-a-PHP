@@ -1,24 +1,13 @@
 <?php
 	
 	require "assets/database.php";
-
-	// echo "Úspěšné přihlášení do databáze";
-
-	$sql = "SELECT * FROM student ";
-	// echo "<br>";
+	require "assets/student.php";
 
 	$connection = connectionDB();
 
-	$result = mysqli_query($connection, $sql);
+	// echo "Úspěšné přihlášení do databáze";
 
-	if( $result === false ) {
-		echo mysqli_error($connection);
-	} else {
-		$students = mysqli_fetch_all($result, MYSQLI_ASSOC);
-	}
-
-   
-	// var_dump($students);
+	$students = getAllStudents($connection, "id, first_name, second_name");
 
 ?>
 
