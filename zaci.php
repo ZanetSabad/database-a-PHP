@@ -44,11 +44,15 @@
 				</ul>
 			<?php endif; ?>
 		</section>
+		<section>
+			<a href="index.php">Zpět na úvodní stránku</a>
+		</section>
+		
 	</main>
 
 	<?php require "assets/footer.php" ?>
    
-	<a href="index.php">Zpět na úvodní stránku</a>
+	
 	<script src="js/index-header.js"></script>
 </body>
 </html>
