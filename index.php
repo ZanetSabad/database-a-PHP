@@ -10,7 +10,6 @@
 				<link rel="stylesheet" href="css/header.css">
 				<link rel="stylesheet" href="css/general.css">
 				<link rel="stylesheet" href="query/header-query.css">
-				
 				<script src="https://kit.fontawesome.com/830a127f42.js" crossorigin="anonymous"></script>
 				<title>Document</title>
 		</head>
@@ -29,6 +28,6 @@
 				</main>
 
 			 <?php require "assets/footer.php" ?>
-			<script ></script>	
+			<script src="js/index-header.js"></script>	
 		</body>
 		</html>
