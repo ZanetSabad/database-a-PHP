@@ -10,7 +10,8 @@
 				<link rel="stylesheet" href="css/header.css">
 				<link rel="stylesheet" href="css/general.css">
 				<link rel="stylesheet" href="query/header-query.css">
-				<link rel="stylesheet" href="css/style.css">
+				<link rel="stylesheet" href="query/index-query.css">
+				<link rel="stylesheet" href="css/index.css">
 				<script src="https://kit.fontawesome.com/830a127f42.js" crossorigin="anonymous"></script>
 				<title>Document</title>
 		</head>
@@ -20,12 +21,14 @@
 
 				<main>				
 					<section class="main-heading">
-					<h1>Škola čar a kouzel v Bradavicích</h1>
+						<img src="img/hogwarts-logo.png" alt="Logo Bradavic">
+						<h1>Škola čar a&nbsp;kouzel</h1>
+						<h2>Bradavice</h2>
 					</section>
 					
-					<section>
+					<!-- <section>
 							<a href="zaci.php">Seznam všech žáků</a>
-					</section>
+					</section> -->
 				</main>
 
 			 <?php require "assets/footer.php" ?>
