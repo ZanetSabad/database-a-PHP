@@ -1,6 +1,41 @@
+/**********************
+        HEADER 
+ **********************/
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(24, 23, 23);
+    height: 70px;
+}
+
+.logo{
+    flex-grow: 1;
+}
+
+.logo img{
+    width: 50px;
+    margin-left: 20px;
+}
 
 
-img{
-    width: 200px;
-    height: 200px;
+/* Navigace */
+nav{
+    margin-right: 30px;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-icon{
+    display: none;
 }
