@@ -72,7 +72,7 @@ function updateStudent($connection, $first_name, $second_name, $age, $live, $col
 
         if(mysqli_stmt_execute($stmt)) {
            
-            redirectUrl("/databaze/one-student.php?id=$id");
+            redirectUrl("/databaze/admin/one-student.php?id=$id");
            
         
         }  
@@ -103,7 +103,7 @@ function deleteStudent($connection, $id) {
         mysqli_stmt_bind_param($stmt, "i", $id);
 
         if(mysqli_stmt_execute($stmt)) {
-            redirectUrl("/databaze/zaci.php");
+            redirectUrl("/databaze/admin/zaci.php");
         }
     }
 }
@@ -157,7 +157,7 @@ function createStudent($connection) {
 
             if(mysqli_stmt_execute($statement)) {
                 $id = mysqli_insert_id($connection);
-                redirectUrl("/databaze/one-student.php?id=$id");
+                redirectUrl("/databaze/admin/one-student.php?id=$id");
             } else {
                 echo mysqli_stmt_error($statement);
             }
