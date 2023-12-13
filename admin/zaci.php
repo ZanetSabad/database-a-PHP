@@ -44,10 +44,7 @@
 				</ul>
 			<?php endif; ?>
 		</section>
-		<section>
-			<a href="../index.php">Zpět na úvodní stránku</a>
-		</section>
-		
+				
 	</main>
 
 	<?php require "../assets/footer.php" ?>
