@@ -14,7 +14,7 @@
     <?php require "assets/header.php" ?>
     <main>
         <section class="registration-form">
-            <form action="" method="POST">
+            <form action="admin/after-registration.php" method="POST">
                 <input type="text"  name="first_name" placeholder="Křestní jméno: "><br>
                 <input type="text" name="second_name" placeholder="Příjmení"> <br>
                 <input type="email" name="email" placeholder="Email"><br>
