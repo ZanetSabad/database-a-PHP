@@ -14,7 +14,14 @@
     <?php require "assets/header.php" ?>
     <main>
         <section class="registration-form">
-       
+            <form action="" method="POST">
+                <input type="text"  name="first_name" placeholder="Křestní jméno: "><br>
+                <input type="text" name="second_name" placeholder="Příjmení"> <br>
+                <input type="email" name="email" placeholder="Email"><br>
+                <input type="password" name="password" placeholder="Heslo"><br>
+                <input type="password" placeholder="Heslo znovu"><br>
+                <button>Zaregistrovat</button>
+            </form>
         </section>
     </main>        
     <?php require "assets/footer.php" ?>
