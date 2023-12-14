@@ -9,7 +9,7 @@
 function connectionDB(){     // databázové spojení
     $db_host = "localhost";
     $db_user = "zany1";
-    $db_password = "heslo123";
+    $db_password = "heslo1234";
     $db_name = "skola";
 
     $conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);
