@@ -2,11 +2,15 @@
 	
 	require "../assets/database.php";
 	require "../assets/student.php";
+	require "../assets/auth.php";
+
+	session_start();
+
+	if( !isLoggedIn() ){
+		die("nepovolený přístup");
+	}
 
 	$connection = connectionDB();
-
-	// echo "Úspěšné přihlášení do databáze";
-
 	$students = getAllStudents($connection, "id, first_name, second_name");
 
 ?>
