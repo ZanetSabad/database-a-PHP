@@ -1,4 +1,7 @@
 <?php
+
+require "../assets/url.php";
+
 // Initialize the session.
 // If you are using session_name("something"), don't forget it now!
 session_start();
@@ -18,4 +21,9 @@ if (ini_get("session.use_cookies")) {
 
 // Finally, destroy the session.
 session_destroy();
+
+
+//přesměrování na úvodní stranu
+redirectUrl("/databaze/index.php");
+
 ?>
