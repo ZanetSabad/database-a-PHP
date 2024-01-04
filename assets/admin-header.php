@@ -9,6 +9,7 @@
         <ul>
             <li><a href="zaci.php">Seznam žáků</a></li>
             <li><a href="add-student.php">Přidat žáka</a></li>
+            <li><a href="log-out.php">Odhlásit</a></li>
         </ul>
     </nav>
     <div class ="menu-icon">
