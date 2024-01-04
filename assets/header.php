@@ -8,7 +8,7 @@
     <nav>
         <ul>
             <li><a href="index.php">Úvodní strana</a></li>
-            <li><a href="registrartion-form.php">Registrace</a></li>
+            <li><a href="registration-form.php">Registrace</a></li>
         </ul>
     </nav>
     <div class ="menu-icon">

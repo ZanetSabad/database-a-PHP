@@ -144,7 +144,7 @@ function getAllStudents($connection){
  * @return void (navrací žádnou hodnotu)
 */
 
-function createStudent($connection) {
+function createStudent($connection, $first_name, $second_name, $age, $live, $collage) {
     $sql = "INSERT INTO student (first_name, second_name, age, live, collage)
     VALUES (?, ?, ?, ?, ?)";
 
