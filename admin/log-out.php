@@ -24,6 +24,6 @@ session_destroy();
 
 
 //přesměrování na úvodní stranu
-redirectUrl("/databaze/index.php");
+redirectUrl("/bradavice/index.php");
 
 ?>

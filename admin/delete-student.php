@@ -1,6 +1,6 @@
 <?php
     require "../assets/student.php";
-    require "../assets/database.php";
+    require "../assets/bradavice.php";
     require "../assets/auth.php";
 
 	session_start();

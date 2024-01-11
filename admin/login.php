@@ -12,7 +12,5 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $log_email = $_POST["login-email"];
     $log_password = $_POST["login-password"];
 
-    var_dump($log_email);
-
-
+    var_dump(authentication($conn, $log_email, $log_password));
 }

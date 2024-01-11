@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $second_name = $_POST["second_name"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-
+    
     $id = createUser($connection, $first_name, $second_name, $email, $password);
 
 
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         //nastavení ID uživatele
         $_SESSION["logged_in_user_id"] = $id;
 
-        redirectUrl("/databaze/admin/zaci.php");
+        redirectUrl("/bradavice/admin/zaci.php");
     } else {
         echo "Uživatele se nepodařilo přidat";
     }
